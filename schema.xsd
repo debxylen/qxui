@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:qxui:schema" xmlns="urn:qxui:schema" elementFormDefault="qualified">
+
+  <xs:complexType name="ElementType" mixed="true">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+
+    <xs:attribute name="id" type="xs:string"/>
+    <xs:attribute name="class" type="xs:string"/>
+
+    <!-- layout -->
+    <xs:attribute name="layout" type="xs:string"/>
+    <xs:attribute name="direction" type="xs:string"/>
+    <xs:attribute name="gap" type="xs:string"/>
+    <xs:attribute name="padding" type="xs:string"/>
+    <xs:attribute name="paddingX" type="xs:string"/>
+    <xs:attribute name="paddingY" type="xs:string"/>
+    <xs:attribute name="flex" type="xs:string"/>
+    <xs:attribute name="width" type="xs:string"/>
+    <xs:attribute name="height" type="xs:string"/>
+    <xs:attribute name="align" type="xs:string"/>
+
+    <!-- styling -->
+    <xs:attribute name="radius" type="xs:string"/>
+    <xs:attribute name="background.color" type="xs:string"/>
+    <xs:attribute name="color" type="xs:string"/>
+    <xs:attribute name="border.color" type="xs:string"/>
+    <xs:attribute name="border.width" type="xs:string"/>
+    <xs:attribute name="opacity" type="xs:string"/>
+
+    <!-- texts -->
+    <xs:attribute name="font.pixelSize" type="xs:string"/>
+    <xs:attribute name="font.weight" type="xs:string"/>
+
+    <!-- interactions -->
+    <xs:attribute name="onClick" type="xs:string"/>
+    <xs:attribute name="dragRegion" type="xs:string"/>
+
+    <!-- * -->
+    <xs:anyAttribute processContents="lax"/>
+  </xs:complexType>
+
+  <!-- standard elements -->
+  <xs:element name="_" type="ElementType"/>
+  <xs:element name="Item" type="ElementType"/>
+  <xs:element name="Text" type="ElementType"/>
+  <xs:element name="Button" type="ElementType"/>
+  <xs:element name="ScrollView" type="ElementType"/>
+  <xs:element name="Image" type="ElementType"/>
+  <xs:element name="Rectangle" type="ElementType"/>
+  <xs:element name="Row" type="ElementType"/>
+  <xs:element name="Column" type="ElementType"/>
+  <xs:element name="TextInput" type="ElementType"/>
+
+</xs:schema>
